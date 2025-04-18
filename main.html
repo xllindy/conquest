@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>My PWA - Hoofdscherm</title>
+  </head>
+  <body>
+    <div class="progress-bar-container">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <a href="badge.html">
+        <span id="task-count" class="task-count"> 0/7</span></a
+      >
+    </div>
+
+    <h1 class="title">Click the parts of the map to start earning badges!</h1>
+
+    <div class="map-container">
+      <div class="map-box pink">
+        <p>Experience</p>
+      </div>
+      <div class="map-box blue">
+        <p>Gaming</p>
+      </div>
+      <div class="map-box green">
+        <p>Activity</p>
+      </div>
+      <div class="map-box orange">
+        <p>Outdoor</p>
+      </div>
+      <div class="map-box red">
+        <p>Comic</p>
+      </div>
+      <div class="map-box yellow">
+        <p>Dealer</p>
+      </div>
+      <div class="map-box purple">
+        <p>Entertainment</p>
+      </div>
+    </div>
+    
+    
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <h2 id="popup-title">Task Title</h2>
+        <p id="popup-description">Task description goes here.</p>
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Enter task details here..."
+        />
+        <button class="confirm-task" onclick="confirmTask()">
+          Confirm Task
+        </button>
+        <button class="close-button" onclick="closePopup()">X</button>
+      </div>
+    </div>
+
+    <div id="video-container" class="video-hidden">
+      <button id="leave-camera">Go back</button>
+      <div id="photo-button-container">
+        <button id="grab-frame">Take picture</button>
+        <button id="submit-image">Submit</button>
+      </div>
+      <img id="taken-photo" />
+    </div>
+
+    <div class="bottom-nav">
+      <a href="main.html" class="nav-item">
+        <p>Map</p>
+      </a>
+      <a href="badge.html" class="nav-item">
+        <p>Badges</p>
+      </a>
+    </div>
+
+    <script src="js/qr-scanner.umd.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
